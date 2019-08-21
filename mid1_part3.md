@@ -53,7 +53,6 @@ Matlab has a whole catalog including all the plotting related information in **G
     str="abcd";
     str(1)
     whos str
-    %
     ```  
         - string specfic functions are both suitable for *string* and *char array* (like str2num, strcmp, strfind, strrep), but the data type of the return value may be affected by your choice
     - cell array
@@ -63,7 +62,6 @@ Matlab has a whole catalog including all the plotting related information in **G
 - Type Conversion  
 There are many ways to convert one data type into another in MATLAB.  
 eg. convert string into double
-
 ```matlab
 str = "123.45";
 db = str2double(str); % similar to int2str, mat2str, num2str, str2num
@@ -71,5 +69,4 @@ db = str2double(str); % similar to int2str, mat2str, num2str, str2num
 db = cast(str,'double')
 
 db = double(str);
-%
 ```
