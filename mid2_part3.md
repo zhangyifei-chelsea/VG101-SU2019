@@ -5,7 +5,6 @@ An ordered collection of data values of the same type.
 ```c
 int array_1D[10]; // data_type variable_name[size];
 int array_2D[5][5]; // 5*5 2D-array
-\\
 ```
 - Initialize an array
 ```c
@@ -39,7 +38,6 @@ for(int i=0;i<5;++i)
 // 3. Use memset for char or use memset to initialize all number to 0
 int a[10];
 memset(a,0,10*sizeof(int));
-//
 ```
 - Pass an array to a function
 ```c
@@ -50,7 +48,6 @@ void func_1D(int array[], int size);
 // Here M,N are global const or macro
 void func_2D(int array[M][N]); // here the dimension of array that is passed into it must fit with M*N
 void func_2D(int array[][N], int row);
-//
 ```
 
 ## Pointer
@@ -63,7 +60,6 @@ int x = 0;
 int* px = &x;
 printf("%p\n", px);  // print the address of x
 printf("%d\n", *px);  // print the value of x
-//
 ```
 If you want to modify the value passed into a function, pass its reference or pass a pointer pointing to it (P186 example)
 
@@ -75,7 +71,6 @@ If you want to modify the value passed into a function, pass its reference or pa
 int n;
 scanf("%d",&n);
 int a[n];
-\\
 ```
 reason: size of stack is limited...
     - Stack
@@ -108,7 +103,6 @@ for(int i=0;i<n;++i)
 for(int i=0;i<n;++i)
     free(A[i]);
 free(A);
-//
 ```
 
 ### Pass it to function
@@ -117,7 +111,6 @@ free(A);
 void func_1D(int* array, int size);
 // 2D case
 void func_2D(int** array, int row, int col); 
-//
 ```
 
 ### Avoid misbehave
@@ -131,7 +124,6 @@ int main()
     //free(a);
     return 0;
 }
-//
 ```
 - case 2: your variable never knows the size of the allocated memory  
 ```c
@@ -142,7 +134,6 @@ int main()
     free(a);
     return 0;
 }
-//
 ```
     - memory allocator: keeps track of which bytes are currently allocated and which are available for use (it knows the size)
     - the return variable of malloc or calloc itself cannot know the size
@@ -154,7 +145,6 @@ a=b; // then the memory previously pointed by a is lost
 free(a);
 free(b); // this may cause double free error
 // after free, a and b are dangling pointer
-//
 ```
     - dangling pointer: pointers that pointing to a memory location that has been freed (set to NULL to get rid of dangling pointer)
     - memory leak: use `valgrind` to check memory leak
@@ -174,7 +164,6 @@ int a[10];
 int* p=a;
 a++; // not valid
 p++; // OK
-//
 ```
 
 ### C-style string
@@ -185,7 +174,6 @@ p++; // OK
 char country_name[4]="GER"; // in this case country_name[3]=='\0', resembles the end of the string
 char name[]="1234"; // you can find the length of this array is 5
 // do not write char country_name[3]="GER";
-//
 ```
     - If your char array does not end with '\0', there might be some problem if you use functions like `strcat`, `strcmp`, `strcpy` etc.
 - As pointer
@@ -198,7 +186,6 @@ char* name=country_name;
 // or
 char* str = malloc(10 * sizeof(char));
 memset(....);
-//
 ```
 
 ## Important exercises
