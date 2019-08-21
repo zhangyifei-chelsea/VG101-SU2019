@@ -1,21 +1,21 @@
 # General
 Use *clearvars, clc* in the first line of every script, good convention.
 
-# Ex 1 & readme
+## Ex 1 & readme
 write everyone's name and id  
 
 no chinese, especially punctuations.
 
 
 
-# Ex 2
+## Ex 2
 better to write y=x.^y rather than y=[x.^y] <= this is unnecessary
 ### task 2
 write sth like y(5,1)=sum(x) is not good. Since it visits the places not belongs to you. 
 
 
 
-# Ex 4
+## Ex 4
 
 **When the number of laps is not an integer also return the number of meters
 remaining in order to complete one more lap.**  
@@ -34,13 +34,13 @@ disp(num2str(a)+" and "+num2str(b));
 
 
 
-# Ex 6
+## Ex 6
 1. input a list if values: use input('') to obtain the list directly
 2. input('..','s') can input a string from command window
 3. can use strcmp to compare string input and the desired input. If they are same return 1. / can also directly compare them
 
 
-# Ex 7
+## Ex 7
 ### task1
 Print the number of primes (how many primes), not the value of all the primes.  
 
