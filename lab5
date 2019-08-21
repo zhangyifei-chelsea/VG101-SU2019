@@ -1,0 +1,51 @@
+ex1
+
+DONT USE array[n] (when n is not a const or macro ...)
+malloc the array -> heap  -> enough space
+do not use VLA(variable length array) -> in stack -> limited space
+
+speed up -> 2 to sqrt(i) to judge whether i is a prime
+
+
+ex2
+
+use 
+const char *MONTH[12]={"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+this kind of things to substitute switch case!
+
+printf("%4d",i); to print the date!  
+
+ex3
+use fgets instead of gets!
+gets will omit the \n in the end, but fgets will not
+\0 resemble the end of a string, replace the \n with \0!
+
+use strstr or strcmp or strncmp to compare!
+
+ex4
+omit
+
+ex5
+similar to ex2
+
+sorting algorithm
+insertion sort, bubble sort, or etc. 
+
+also for output 
+can use 
+const char *SUIT[4]={"Spades", "Hearts", "Dia..s", "Clubs"};
+and
+const char *RANK[13]={"2", "3", "4", ... , "King", "Ace"}
+
+store your card as 0-51, use /13 and %13 to output the suit and club 
+
+ex6
+explain XOR
+explain karatsuba
+explain optimal approach
+
+
+lab5 week2
+1) use recursion to construct a 5 level binary tree
+2) the default path of Clion for file io is under cmake-build-debug, so you need to put your file there to directly use fopen(filename,'.');
+
