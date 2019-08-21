@@ -35,16 +35,15 @@ Note that this function works differently if you are using old version of MatLab
 	100000001
 	1001001
 	100100100
-	%
 
 ### Hints
 1. Cut the number in to 3-digit partitions.  
 Read each 3-digit correctly, add the thousand/ million correspondingly. 
 2. The position of `and`
-* Process 3 digits in a roll, represent them as `ABC`
-* `and` is needed when
-  * $B\neq 0$ or $C\neq 0$
-  * It is not the most significant 3 bits
+- Process 3 digits in a roll, represent them as `ABC`
+- `and` is needed when
+  - $B\neq 0$ or $C\neq 0$
+  - It is not the most significant 3 bits
 	
 ## ex4
 ### Fatal mistakes
@@ -53,8 +52,6 @@ Read each 3-digit correctly, add the thousand/ million correspondingly.
     1. Some regard it as the number of digits it needs to preserve in the final result
     2. Others regard it as the ending case should have abs(f(x_new))<10^(-precision).
 
-# while abs(x_{n-1}-x_{n-2}< 10^{-precision})
-# recursion => if abs(x_{n-1}-x_{n-2}< 10^{-precision}) else recursively call this function
 
 ## ex5
 ### Fatal mistakes
