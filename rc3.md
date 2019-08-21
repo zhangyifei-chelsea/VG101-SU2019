@@ -291,7 +291,7 @@ db = double(str);
     - specify the name of each field and corresponding values
     - all elements in a typical structure array should have same fields
     - field names should be *char array* or *string*
-    ```matlab
+```matlab
 students(1) = struct('name',"Jane",'id',"01",'hw',[80,90,80],'mid',100,'final',90);
 students(2) = struct('name',"Simon",'id',"02",'hw',[95,85,100],'mid',80,'final',100);
 students(3) = struct('name',"Alice",'id',"03",'hw','None','mid',95,'final',95);
@@ -300,8 +300,7 @@ students(3) = struct('name',"Alice",'id',"03",'hw','None','mid',95,'final',95);
 students(4).name = "Bob";  % all other fields will be left as empty []
 students(4).id = "04";
 students(4).hw = [10 20 30];
-%
-    ```
+```
 - Access and modify a field in structure
 ```matlab
 % access/modify a field
