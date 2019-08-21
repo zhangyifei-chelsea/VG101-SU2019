@@ -5,7 +5,6 @@
 ```c
 FILE *input;
 input=fopen("matrices.txt","r");
-%
 ```
  pay attention that the path should be relative path instead of absolute path, since absolute path depends on your own computer
 - Judge the size of the matrix  
@@ -23,7 +22,6 @@ char c='1';
             ++n;
     }
     rewind(input);
-%
 ```
 - malloc 2D array
 ```c
@@ -32,7 +30,6 @@ for(int i=0;i<n;++i)
 {
     A[i]=malloc(n* sizeof(int));
 }
-\\
 ```
 - read the file and store numbers into the matrix
 ```c
@@ -43,7 +40,6 @@ for(int i=0;i<n;++i)
         fscanf(input,"%d",&A[i][j]);
     }
 }
-\\
 ```
 - do matrix arithmetics
 - free 2D array
@@ -51,7 +47,6 @@ for(int i=0;i<n;++i)
 for(int i=0;i<n;++i)
     free(A[i]);
 free(A);
-//
 ```
 
 
@@ -74,28 +69,25 @@ typedef struct universalSet { void *elem; int card; int type; } uset;
 char *set_ele = set->elem;
 char add_ele = (*(char *) elem);
 // then add of remove elements
-//
 ```
    - memory operation (memcmp&memcpy)
 ```c
 memcmp(elem, (void *) ((size_t) set->elem + i * set->type), (size_t) set->type) // compare the new element `elem` with the i th element of the set
 memcpy((void *) ((size_t) set->elem + set->card * set->type), elem, (size_t) set->type); //copy the value of the new `elem` to the end of the set
-\\
 ```
 
 ### ex6
 - Insert First List  
 ```c
-\\ how to call it
+// how to call it
 node_t *list1 = Initialize(...);
 InsertFirstList(&list1, ch);
-\\ function body
+// function body
 void InsertFirstList(node_t **head, char insert_char)
-\\malloc a new node
-\\let new_node->next point to the original head
-\\let head point to the address of the new node
-\\since the address head pointing to may change, we need node_t **head
-\\
+// malloc a new node
+// let new_node->next point to the original head
+// let head point to the address of the new node
+// since the address head pointing to may change, we need node_t **head
 ```
 - Insert Last
   1. malloc a new_node
@@ -133,8 +125,7 @@ Function generate(left, right, solution_set, current_string)
     if (left > 0)
         generate(left-1, right, solution_set, current_string + '(')
     if (right > left)
-        generate(left, right-1, solution_set, current_string + ')')
-%        
+        generate(left, right-1, solution_set, current_string + ')')      
 ```
 
 ## Lab 5
@@ -145,7 +136,6 @@ struct node
     struct node *left; 
     struct node *right; 
 }node_t;
-//
 ```
 ### Initialize a binary tree
 malloc the root node in your main, then call this init function on root.
@@ -165,7 +155,6 @@ void init(node_t *root, int level)
         init(root->right,level-1);
     }
 }
-//
 ```
 ### Post-order transversal to get winners
 ```
@@ -175,7 +164,6 @@ function Postorder(node_t* root)
     Postorder(root->left, k);
     Postorder(root->right, k);
     root->country = get_winner(root->left->country, root->right->country , k);
-//
 ```
 ### Free it
 ```c
@@ -190,6 +178,5 @@ void free_tree(node_t* root)
         free(root);
     }
 }
-//
 ```
 use valgrind to check memory leak!
